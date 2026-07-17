@@ -1,5 +1,14 @@
-ALTER TABLE Student
-ADD Email VARCHAR(30),
-ADD PhoneNumber VARCHAR(10);
+CREATE TABLE Course (
+    CourseID INT PRIMARY KEY,
+    CourseName VARCHAR(100),
+    Credits INT,
+    DepartmentID INT
+);
 
-DESC Student;
+INSERT INTO Course (CourseID, CourseName, Credits, DepartmentID) 
+VALUES 
+    (101, 'Programming', 4, 1),
+    (102, 'Web Development', 3, 1),
+    (103, 'Database Management systems', 4, 2);
+DESCRIBE Course;
+SELECT * FROM Course;
